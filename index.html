@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>tylrcc</title>
+  <meta name="description" content="tylrcc. Car photography and personal content. Meets, night drives, rolling shots, and the details in between.">
+  <meta property="og:title" content="tylrcc">
+  <meta property="og:description" content="Car photography and personal content. Meets, night drives, rolling shots, and the details in between.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="work/hero.svg">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/iAWriterQuattroS-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-mode">
+
+  <button id="theme-toggle" aria-label="Toggle theme" type="button">☼</button>
+
+  <div class="content">
+
+    <!-- LEFT: profile (fixed on desktop) -->
+    <aside class="page page-left" id="home" data-view="home">
+      <div class="page-layout">
+        <div class="page-content">
+          <div class="bodycopy">
+            <br>
+            <span id="site-name"></span>
+            <br><br><br><br>
+            <hr>
+            <br>
+            <div class="intro">
+              <span id="site-bio"></span><br>
+              <br>
+              <div class="project-layout"><div class="project-left"><a id="site-currently" href="#" target="_blank" rel="noopener"></a></div></div>
+              <br>
+            </div>
+            <br>
+            <hr>
+            <div class="desktop-only">
+              <br>
+              <a href="#about" data-overlay="about">About</a><br>
+              <a href="#contact" data-overlay="contact">Contact</a><br>
+              <br>
+            </div>
+
+            <!-- Mobile only: hero image + links (mirrors the reference mobile home) -->
+            <div class="mobile-only mobile-home">
+              <br>
+              <img id="hero-image" class="hero" alt="" src="">
+              <br><br>
+              <div id="mobile-links" class="link-list"></div>
+              <br><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER: selected works (scrolls) -->
+    <main class="page page-main" id="work" data-view="work">
+      <div class="page-layout">
+        <div class="page-content">
+          <div class="bodycopy">
+            <div class="project-section">
+              <div class="project-wrapper">
+                <div class="section-header">SELECTED WORKS</div>
+                <div class="category-filter" id="category-filter" role="tablist"></div>
+              </div>
+              <div class="divider-line"></div>
+              <div id="projects"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- RIGHT: CV (fixed on desktop, scrolls internally) -->
+    <aside class="page page-right" id="cv" data-view="cv">
+      <div class="page-layout">
+        <div class="page-content">
+          <div class="bodycopy">
+            <br>
+            CV
+            <br><br><br><br>
+            <hr>
+            <br>
+            <div id="cv-blocks"></div>
+            <br><br><br><br><br>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Mobile bottom nav (mirrors WORK / ABOUT / CV / CONTACT on the reference) -->
+  <nav class="mobile-nav mobile-only" aria-label="Sections">
+    <a href="#work" data-nav="work">WORK</a>
+    <a href="#home" data-nav="home">ABOUT</a>
+    <a href="#cv" data-nav="cv">CV</a>
+    <a href="#contact" data-overlay="contact">CONTACT</a>
+  </nav>
+
+  <!-- Overlays: About + Contact -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="overlay-backdrop" data-close></div>
+    <div class="overlay-panel bodycopy" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+      <button class="overlay-close" type="button" data-close aria-label="Close">✕</button>
+      <div id="overlay-body"></div>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
