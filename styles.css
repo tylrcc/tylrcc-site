@@ -83,6 +83,11 @@ a {
   color: var(--text-color);
   text-decoration: none;
 }
+a.ig-link {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
 a:hover,
 a:active { opacity: 0.7; }
 
@@ -301,10 +306,12 @@ hr {
   width: 100%;
   background: none;
 }
-.project-container .media img {
+.project-container .media img,
+.project-container video.media {
   width: 100%;
   height: auto;
   display: block;
+  background: #000;
 }
 /* No hover states on project media, matching the reference */
 .project-container a:hover,

@@ -28,9 +28,9 @@ Everything you would ever want to change is in `content.js`:
 | Right column | `cv` |
 | Mobile hero image | `heroImage` |
 
-### Swapping in your photos
+### Media
 
-The images in `work/` are labelled placeholders. Export your shots as JPG (about 1600px wide, sRGB), drop them into `work/`, then update each project's `image` path in `content.js`. Delete the `.svg` placeholders once they are no longer referenced.
+`work/` holds the public-grid photos and reel files already on the page. To add another, drop the file in `work/` and add a project in `content.js`. A project with `video` plays in the card (poster is `image`). `href` should be that Instagram post.
 
 ## Run locally
 

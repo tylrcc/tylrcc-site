@@ -34,7 +34,14 @@
       wrap.appendChild(
         el("div", { class: "link-row" }, [
           el("span", { class: "link-label", text: l.label }),
-          el("a", { href: l.href, target: "_blank", rel: "noopener", text: l.text }),
+          el("a", {
+            class: "ig-link",
+            href: l.href,
+            target: "_blank",
+            rel: "noopener",
+            "data-ig": l.ig || "",
+            text: l.text,
+          }),
         ])
       );
     });
@@ -90,10 +97,27 @@
     if (!host) return;
 
     (S.projects || []).forEach(function (p) {
-      var img = el("img", { src: p.image, alt: p.title, loading: "lazy", decoding: "async" });
-      var media = p.href
-        ? el("a", { class: "media", href: p.href, target: "_blank", rel: "noopener" }, [img])
-        : el("div", { class: "media" }, [img]);
+      var media;
+      if (p.video) {
+        var video = el("video", {
+          class: "media",
+          src: p.video,
+          poster: p.image || "",
+          playsinline: "",
+          loop: "",
+          muted: "",
+          preload: "metadata",
+          controls: "",
+        });
+        video.muted = true;
+        video.setAttribute("muted", "");
+        media = video;
+      } else {
+        var img = el("img", { src: p.image, alt: p.title, loading: "lazy", decoding: "async" });
+        media = p.href
+          ? el("a", { class: "media", href: p.href, target: "_blank", rel: "noopener" }, [img])
+          : el("div", { class: "media" }, [img]);
+      }
 
       var titleCol = el("div", { class: "column-unit project-caption" }, [
         el("span", { class: "title" }, [
@@ -166,6 +190,11 @@
       function (entries) {
         entries.forEach(function (entry) {
           entry.target.classList.toggle("in-view", entry.isIntersecting);
+          var video = entry.target.querySelector("video");
+          if (video) {
+            if (entry.isIntersecting) video.play().catch(function () {});
+            else video.pause();
+          }
         });
       },
       { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
@@ -191,7 +220,22 @@
     (S.cv || []).forEach(function (block, i) {
       var lines = el("div", { class: "column-unit" });
       (block.lines || []).forEach(function (line) {
-        lines.appendChild(el("span", { class: "cv-line", text: line }));
+        if (line && typeof line === "object") {
+          lines.appendChild(
+            el("span", { class: "cv-line" }, [
+              el("a", {
+                class: "ig-link",
+                href: line.href,
+                target: "_blank",
+                rel: "noopener",
+                "data-ig": line.ig || "",
+                text: line.text,
+              }),
+            ])
+          );
+        } else {
+          lines.appendChild(el("span", { class: "cv-line", text: line }));
+        }
       });
       host.appendChild(
         el("div", { class: "cv-block" }, [
@@ -363,6 +407,23 @@
   /* =================================================
      BOOT
      ================================================= */
+  function initInstagramLinks() {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[data-ig]");
+      var user = a && a.getAttribute("data-ig");
+      if (!user) return;
+      var mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (!mobile) return;
+      e.preventDefault();
+      var web = a.href;
+      var start = Date.now();
+      window.location.href = "instagram://user?username=" + user;
+      setTimeout(function () {
+        if (!document.hidden && Date.now() - start < 1600) window.location.href = web;
+      }, 900);
+    });
+  }
+
   function boot() {
     renderProfile();
     renderFilters();
@@ -373,6 +434,7 @@
     initScrollFadeIns();
     initOverlays();
     initMobileNav();
+    initInstagramLinks();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

@@ -16,7 +16,7 @@ window.SITE = {
   // Links shown in About, Contact, and the mobile home screen.
   // Add more rows here as you pick up platforms (TikTok, YouTube, etc).
   links: [
-    { label: "INSTAGRAM", text: "@tylrcc", href: "https://www.instagram.com/tylrcc/" },
+    { label: "INSTAGRAM", text: "@tylrcc", href: "https://www.instagram.com/tylrcc/", ig: "tylrcc" },
   ],
 
   about: {
@@ -49,64 +49,103 @@ window.SITE = {
     { key: "video", label: "VIDEO" },
   ],
 
-  // Drop your photos into /work and point `image` at them.
-  // Every card links out to `href` (defaults to Instagram).
+  // Photos and reels pulled from the public @tylrcc grid.
+  // `video` plays in the card. `href` opens that post on Instagram.
   projects: [
     {
-      title: "Night Runs",
+      title: "Night Rain",
       year: "2026",
-      description: "Long exposures, wet asphalt, and headlights. A running series shot after midnight around the city.",
-      image: "work/night-runs.svg",
-      categories: ["cars", "night"],
-      href: "https://www.instagram.com/tylrcc/",
+      description: "A yellow coupe in the rain at night, headlights cutting through the trees.",
+      image: "work/Db7Q8usSu73-1.jpg",
+      video: "work/Db7Q8usSu73.mp4",
+      categories: ["cars", "night", "video"],
+      href: "https://www.instagram.com/reel/Db7Q8usSu73/",
     },
     {
-      title: "Meet Season",
+      title: "Cloud Line",
       year: "2026",
-      description: "Coverage from local meets and pop up shows. Builds, owners, and the crowd around them.",
-      image: "work/meet-season.svg",
-      categories: ["cars", "meets"],
-      href: "https://www.instagram.com/tylrcc/",
-    },
-    {
-      title: "Detail Study",
-      year: "2025",
-      description: "Badges, stitching, wheel faces, exhaust tips. Close crops that treat the car like an object.",
-      image: "work/detail-study.svg",
-      categories: ["details"],
-      href: "https://www.instagram.com/tylrcc/",
-    },
-    {
-      title: "Rolling Shots",
-      year: "2025",
-      description: "Car to car at speed. Motion blur in the wheels, the body tack sharp.",
-      image: "work/rolling-shots.svg",
-      categories: ["cars", "rolling"],
-      href: "https://www.instagram.com/tylrcc/",
-    },
-    {
-      title: "Garage Sessions",
-      year: "2025",
-      description: "Controlled light, one car, no distractions. Studio style sets shot in borrowed garages.",
-      image: "work/garage-sessions.svg",
-      categories: ["cars", "details"],
-      href: "https://www.instagram.com/tylrcc/",
-    },
-    {
-      title: "On the Road",
-      year: "2026",
-      description: "The personal side. Road trips, gas station stops, and whatever is worth pulling over for.",
-      image: "work/on-the-road.svg",
+      description: "Last light on a ridgeline, shot from under a canopy.",
+      image: "work/DbjwK9CkXGj-1.jpg",
       categories: ["personal"],
-      href: "https://www.instagram.com/tylrcc/",
+      href: "https://www.instagram.com/p/DbjwK9CkXGj/",
     },
     {
-      title: "Behind the Lens",
+      title: "Field Stop",
       year: "2026",
-      description: "Short form video. How the shots get made, plus the ones that did not make the grid.",
-      image: "work/behind-the-lens.svg",
-      categories: ["video", "personal"],
-      href: "https://www.instagram.com/tylrcc/",
+      description: "An olive coupe parked beside a tractor and a green trailer.",
+      image: "work/DbhlNLSHG37-2.jpg",
+      categories: ["cars"],
+      href: "https://www.instagram.com/p/DbhlNLSHG37/",
+    },
+    {
+      title: "Silver Front",
+      year: "2026",
+      description: "Low light, headlights on, pulled up against the trees.",
+      image: "work/DbZVBwbSoOv-1.jpg",
+      video: "work/DbZVBwbSoOv.mp4",
+      categories: ["cars", "night", "video"],
+      href: "https://www.instagram.com/reel/DbZVBwbSoOv/",
+    },
+    {
+      title: "Rain Street",
+      year: "2026",
+      description: "Wet asphalt, a dark coupe with a gold stripe, rain still falling.",
+      image: "work/DbZUvgFyaZW-1.jpg",
+      video: "work/DbZUvgFyaZW.mp4",
+      categories: ["cars", "video"],
+      href: "https://www.instagram.com/reel/DbZUvgFyaZW/",
+    },
+    {
+      title: "White Bench",
+      year: "2026",
+      description: "Late sun, a white wedge parked under the trees.",
+      image: "work/DbRfW7LkcGa-2.jpg",
+      categories: ["cars", "personal"],
+      href: "https://www.instagram.com/p/DbRfW7LkcGa/",
+    },
+    {
+      title: "Night Garage",
+      year: "2026",
+      description: "Two cars side by side under a warm garage light.",
+      image: "work/DarfGDhyuTM-1.jpg",
+      video: "work/DarfGDhyuTM.mp4",
+      categories: ["cars", "video"],
+      href: "https://www.instagram.com/reel/DarfGDhyuTM/",
+    },
+    {
+      title: "Open Field",
+      year: "2026",
+      description: "A green coupe sitting in a field, hills behind it.",
+      image: "work/DaXImlhyEWW-1.jpg",
+      video: "work/DaXImlhyEWW.mp4",
+      categories: ["cars", "video"],
+      href: "https://www.instagram.com/reel/DaXImlhyEWW/",
+    },
+    {
+      title: "In the Shade",
+      year: "2026",
+      description: "A white coupe under a wall of trees.",
+      image: "work/DaXIN1xHCVa-1.jpg",
+      categories: ["cars", "personal"],
+      href: "https://www.instagram.com/p/DaXIN1xHCVa/",
+    },
+    {
+      title: "Red Wing",
+      year: "2026",
+      description: "A red wing car parked along a tree-lined street.",
+      image: "work/DZtrMmhy-Wj-1.jpg",
+      video: "work/DZtrMmhy-Wj.mp4",
+      categories: ["cars", "video"],
+      href: "https://www.instagram.com/reel/DZtrMmhy-Wj/",
+    },
+    {
+      title: "Blue Through Town",
+      year: "2026",
+      description: "A light blue coupe rolling past a white building.",
+      image: "work/DY6AyxnyheX-2.jpg",
+      video: "work/DY6AyxnyheX.mp4",
+      categories: ["cars", "rolling", "video"],
+      href: "https://www.instagram.com/reel/DY6AyxnyheX/",
     },
   ],
 
@@ -145,7 +184,7 @@ window.SITE = {
     },
     {
       label: "Platforms",
-      lines: ["Instagram @tylrcc"],
+      lines: [{ text: "Instagram @tylrcc", href: "https://www.instagram.com/tylrcc/", ig: "tylrcc" }],
     },
     {
       label: "Tools",
@@ -160,5 +199,5 @@ window.SITE = {
     },
   ],
 
-  heroImage: "work/hero.svg",
+  heroImage: "work/DbjwK9CkXGj-1.jpg",
 };
