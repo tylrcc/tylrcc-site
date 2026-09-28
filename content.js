@@ -118,15 +118,6 @@ window.SITE = {
       categories: ["video"],
       href: "https://www.instagram.com/reel/DZtrMmhy-Wj/",
     },
-    {
-      title: "Blue Through Town",
-      year: "2026",
-      description: "A light blue coupe rolling past a white building.",
-      image: "work/DY6AyxnyheX-2.jpg",
-      video: "work/DY6AyxnyheX.mp4",
-      categories: ["video"],
-      href: "https://www.instagram.com/reel/DY6AyxnyheX/",
-    },
   ],
 
   // Right hand column. Each block is a label plus a list of lines.
