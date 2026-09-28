@@ -312,6 +312,13 @@ hr {
   height: auto;
   display: block;
   background: #000;
+  pointer-events: none;
+}
+.project-container video.media::-webkit-media-controls,
+.project-container video.media::-webkit-media-controls-enclosure,
+.project-container video.media::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
 }
 /* No hover states on project media, matching the reference */
 .project-container a:hover,

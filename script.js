@@ -103,14 +103,22 @@
           class: "media",
           src: p.video,
           poster: p.image || "",
+          autoplay: "",
           playsinline: "",
           loop: "",
           muted: "",
           preload: "metadata",
-          controls: "",
         });
         video.muted = true;
+        video.loop = true;
+        video.autoplay = true;
+        video.playsInline = true;
         video.setAttribute("muted", "");
+        video.removeAttribute("controls");
+        video.addEventListener("ended", function () {
+          video.currentTime = 0;
+          video.play().catch(function () {});
+        });
         media = video;
       } else {
         var img = el("img", { src: p.image, alt: p.title, loading: "lazy", decoding: "async" });

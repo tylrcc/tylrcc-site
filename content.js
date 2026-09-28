@@ -5,11 +5,11 @@ window.SITE = {
   name: "TYLRCC",
   title: "tylrcc",
   description:
-    "tylrcc. Car photography and personal content. Meets, night drives, rolling shots, and the details in between.",
+    "tylrcc. Car photography and personal content. Night drives, stills, and short clips.",
 
   bio: [
-    "Car photographer and content creator shooting automotive culture:",
-    "meets, night drives, rolling shots, and the small details most people walk past.",
+    "Car photographer and content creator.",
+    "Night drives, stills, and the personal stuff around them.",
   ],
   currently: { label: "Currently posting @tylrcc", href: "https://www.instagram.com/tylrcc/" },
 
@@ -22,7 +22,7 @@ window.SITE = {
   about: {
     heading: "About",
     paragraphs: [
-      "tylrcc started as a place to post cars. It is turning into something a little wider: the drives, the people at the meets, the late nights in the garage, and the personal side of chasing this stuff.",
+      "tylrcc started as a place to post cars. It is turning into something a little wider: the drives, the late nights in the garage, and the personal side of chasing this stuff.",
       "Everything here is shot and edited by me. If you see your car on the page and want the full-res file, send a message.",
     ],
     listening: { label: "LISTENING ACTIVITY", line1: "RECENTLY PLAYED", line2: "Whatever is on in the car right now." },
@@ -32,7 +32,7 @@ window.SITE = {
     heading: "Contact",
     lines: [
       "The fastest way to reach me is a DM on Instagram.",
-      "Open to shoots, meet coverage, collabs, and content work.",
+      "Open to shoots, collabs, and content work.",
     ],
   },
 
@@ -40,11 +40,7 @@ window.SITE = {
   // values used in each project's `categories` array below.
   filters: [
     { key: "all", label: "ALL" },
-    { key: "cars", label: "CARS" },
-    { key: "details", label: "DETAILS" },
     { key: "night", label: "NIGHT" },
-    { key: "meets", label: "MEETS" },
-    { key: "rolling", label: "ROLLING SHOTS" },
     { key: "personal", label: "PERSONAL" },
     { key: "video", label: "VIDEO" },
   ],
@@ -58,7 +54,7 @@ window.SITE = {
       description: "A yellow coupe in the rain at night, headlights cutting through the trees.",
       image: "work/Db7Q8usSu73-1.jpg",
       video: "work/Db7Q8usSu73.mp4",
-      categories: ["cars", "night", "video"],
+      categories: ["night", "video"],
       href: "https://www.instagram.com/reel/Db7Q8usSu73/",
     },
     {
@@ -74,7 +70,7 @@ window.SITE = {
       year: "2026",
       description: "An olive coupe parked beside a tractor and a green trailer.",
       image: "work/DbhlNLSHG37-2.jpg",
-      categories: ["cars"],
+      categories: [],
       href: "https://www.instagram.com/p/DbhlNLSHG37/",
     },
     {
@@ -83,7 +79,7 @@ window.SITE = {
       description: "Low light, headlights on, pulled up against the trees.",
       image: "work/DbZVBwbSoOv-1.jpg",
       video: "work/DbZVBwbSoOv.mp4",
-      categories: ["cars", "night", "video"],
+      categories: ["night", "video"],
       href: "https://www.instagram.com/reel/DbZVBwbSoOv/",
     },
     {
@@ -92,16 +88,8 @@ window.SITE = {
       description: "Wet asphalt, a dark coupe with a gold stripe, rain still falling.",
       image: "work/DbZUvgFyaZW-1.jpg",
       video: "work/DbZUvgFyaZW.mp4",
-      categories: ["cars", "video"],
+      categories: ["video"],
       href: "https://www.instagram.com/reel/DbZUvgFyaZW/",
-    },
-    {
-      title: "White Bench",
-      year: "2026",
-      description: "Late sun, a white wedge parked under the trees.",
-      image: "work/DbRfW7LkcGa-2.jpg",
-      categories: ["cars", "personal"],
-      href: "https://www.instagram.com/p/DbRfW7LkcGa/",
     },
     {
       title: "Night Garage",
@@ -109,7 +97,7 @@ window.SITE = {
       description: "Two cars side by side under a warm garage light.",
       image: "work/DarfGDhyuTM-1.jpg",
       video: "work/DarfGDhyuTM.mp4",
-      categories: ["cars", "video"],
+      categories: ["night", "video"],
       href: "https://www.instagram.com/reel/DarfGDhyuTM/",
     },
     {
@@ -118,16 +106,8 @@ window.SITE = {
       description: "A green coupe sitting in a field, hills behind it.",
       image: "work/DaXImlhyEWW-1.jpg",
       video: "work/DaXImlhyEWW.mp4",
-      categories: ["cars", "video"],
+      categories: ["video"],
       href: "https://www.instagram.com/reel/DaXImlhyEWW/",
-    },
-    {
-      title: "In the Shade",
-      year: "2026",
-      description: "A white coupe under a wall of trees.",
-      image: "work/DaXIN1xHCVa-1.jpg",
-      categories: ["cars", "personal"],
-      href: "https://www.instagram.com/p/DaXIN1xHCVa/",
     },
     {
       title: "Red Wing",
@@ -135,7 +115,7 @@ window.SITE = {
       description: "A red wing car parked along a tree-lined street.",
       image: "work/DZtrMmhy-Wj-1.jpg",
       video: "work/DZtrMmhy-Wj.mp4",
-      categories: ["cars", "video"],
+      categories: ["video"],
       href: "https://www.instagram.com/reel/DZtrMmhy-Wj/",
     },
     {
@@ -144,7 +124,7 @@ window.SITE = {
       description: "A light blue coupe rolling past a white building.",
       image: "work/DY6AyxnyheX-2.jpg",
       video: "work/DY6AyxnyheX.mp4",
-      categories: ["cars", "rolling", "video"],
+      categories: ["video"],
       href: "https://www.instagram.com/reel/DY6AyxnyheX/",
     },
   ],
@@ -156,9 +136,8 @@ window.SITE = {
       label: "Focus",
       lines: [
         "Automotive photography",
-        "Rolling shots and night work",
-        "Detail and studio style sets",
-        "Short form video and personal content",
+        "Night work and short form video",
+        "Personal content",
       ],
     },
     {
@@ -169,7 +148,7 @@ window.SITE = {
         "Ongoing",
         "",
         "Independent",
-        "Meet coverage, owner shoots, collabs",
+        "Owner shoots and collabs",
         "Ongoing",
       ],
     },
@@ -177,7 +156,6 @@ window.SITE = {
       label: "Available for",
       lines: [
         "Owner shoots",
-        "Meet and event coverage",
         "Brand and shop collabs",
         "Content for pages and dealers",
       ],
